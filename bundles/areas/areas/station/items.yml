@@ -1,0 +1,17 @@
+---
+- id: "prybar"
+  name: "Pry Bar"
+  type: WEAPON
+  roomDesc: "Pry Bar"
+  keywords: [ "bar", "tool", "metal", "pry" ]
+  description: "A handy metal tool with a flat, narrowed end. You could probably pry something with it."
+  metadata:
+    level: 1
+    slot: 'wield'
+    itemLevel: 1
+    quality: common
+    minDamage: 7
+    maxDamage: 15
+    speed: 2.8
+    stats:
+      critical: 1

@@ -1,3 +1,12 @@
 [submodule "bundles/telnet-networking"]
 	path = bundles/telnet-networking
 	url = https://github.com/ranviermud/telnet-networking
+[submodule "local-modules/ranvier-core"]
+	path = local-modules/ranvier-core
+	url = https://github.com/slinkous/ranvier-core.git
+[submodule "local-modules/ranvier-telnet"]
+	path = local-modules/ranvier-telnet
+	url = https://github.com/slinkous/ranvier-telnet.git
+[submodule "local-modules/datasource-file"]
+	path = local-modules/datasource-file
+	url = https://github.com/slinkous/datasource-file.git

@@ -3,7 +3,7 @@
   "bundles": [
     "telnet-networking",
     "tiny-input-events",
-    "tiny-areas",
+    "areas",
     "tiny-commands",
     "tiny-player-events",
     "tiny-attributes"
@@ -78,7 +78,7 @@
   "minPlayerNameLength": 3,
   "maxCharacters": 3,
   "reportToAdmins": false,
-  "startingRoom": "tiny:start",
+  "startingRoom": "station:airlock",
   "moveCommand": "move",
   "skillLag": 2000,
   "defaultMaxPlayerInventory": 16,

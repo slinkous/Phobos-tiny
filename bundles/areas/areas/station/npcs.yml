@@ -1,0 +1,31 @@
+---
+# Person NPC's
+- id: lalee
+  keywords: ['lalee']
+  name: Lalee
+  level: 2
+  description: "A fellow Phobos student with large cat-eye glasses and a serious expression. There appears to be dirt under her fingernails"
+  # script: 'rat'
+  # items: ['limbo:sliceofcheese']
+  # quests: ['limbo:onecheeseplease']
+  behaviors:
+    ranvier-wander:
+      interval: 180
+      restrictTo: ['station:shaft-magenta', 'station:shaft-yellow', 'station:shaft-blue', station:shaft-green]
+  attributes:
+    health: 100
+# Ship Problems
+- id: spark
+  keywords: ['spark', 'circuit', 'wires', 'electrical']
+  name: Sparking electrical wires
+  level: 1
+  description: "A fellow Phobos student with large cat-eye glasses and a serious expression. There appears to be dirt under her fingernails"
+  behaviors:
+    ranvier-aggro:
+       delay: 30
+       warnMessage: '%name% start to hiss and smoke'
+       towards:
+         players: true
+         npcs: false
+  attributes:
+    health: 100

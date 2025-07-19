@@ -1,0 +1,97 @@
+---
+- id: airlock
+  title: "The Airlock"
+  description: "You find yourself floating in a cozy, brightly lit cylinder, rotating slowly in the zero gravity. As you turn, you see a small porthole at your feet, showing the black void of space, and above your head is a circular door, with handles framing it and a big red button that just lit up, inviting you to enter. The Phobos University logo is stenciled on the wall."
+  exits:
+    - roomId: "station:shaft-yellow"
+      direction: button
+      leaveMessage: " presses a button and floats into Phobos University Station"
+- id: shaft-yellow
+  title: "Central Access Shaft: Yellow Floor"
+  description: >-
+    You grab a rung of a ladder that is running the length of a dark access tube to keep yourself from floating away in the zero gravity. Yellow lights glow on one side of you, illuminating the drop pod to the engineering level. You can also continue -- shall we call it up? It's away from the airlock, and above your head as a result, to the next level of the Central Access Shaft.
+  exits:
+    - roomId: "station:shaft-magenta"
+      direction: magenta
+      leaveMessage: " graps a hand loop and is towed weightlessly toward the magenta level."
+    - roomId: "station:shaft-blue"
+      direction: blue
+      leaveMessage: " grabs a hand loop and is gently towed to toward the blue floor"
+    - roomId: "station:shaft-green"
+      direction: green
+      leaveMessage: " grabs a hand loop and is gently towed to toward the green floor"
+  npcs:
+    - id: "station:spark"
+      # % chance to respawn every interval
+      respawnChance: 25
+      # Maximum number of this NPC that can exist in the room at once
+      maxLoad: 1
+    - id: "station:lalee"
+- id: shaft-magenta
+  title: "Central Access Shaft: Magenta Floor"
+  description: >-
+    You grab a handle to keep yourself from floating away as you meet the glowing magenta entrance of the commons area drop pod. You can go back (down) to the yellow light beneath your feet -- although the whipped over your head as you grabbed on to stop yourself, but lets call it down, anyway. To the opposite direction is up, the blue-lighted gateway to the Academic level.
+  exits:
+    - roomId: "station:shaft-yellow"
+      direction: yellow
+      leaveMessage: " grabs a hand loop and is gently towed to toward the yellow floor"
+    - roomId: "station:shaft-blue"
+      direction: blue
+      leaveMessage: " grabs a hand loop and is gently towed to toward the blue floor"
+    - roomId: "station:commons-floor-drop"
+      direction: drop
+      leaveMessage: " swings confidently into the commons area descent pod."
+- id: shaft-blue
+  title: "Central Access Shaft: Blue"
+  description: >-
+    You hold on to the central access shaft ladder grips to steady yourself in the blue glow of the drop pod entrance to the Academic floor. You can see a green glow overhead, and beyond it what looks like the open blackness of the void of space. Looking the other way you also head down to the magenta floor.
+  exits:
+    - roomId: "station:shaft-yellow"
+      direction: yellow
+      leaveMessage: " grabs a hand loop and is gently towed to toward the yellow floor"
+    - roomId: "station:shaft-magenta"
+      direction: down
+      leaveMessage: " grabs a hand loop and is gently towed to toward the magenta floor"
+    - roomId: "station:shaft-green"
+      direction: up
+      leaveMessage: " grabs a hand loop and is gently towed to toward the green floor"
+    # - roomId: "station:academic-floor-drop"
+    #   direction: blue
+    #   leaveMessage: " floats casually into the to the Academic level descent pod."
+- id: shaft-green
+  title: "Central Access Shaft: Green"
+  description: >-
+    You hold on to the central access shaft ladder grips to steady yourself in the blue glow of the drop pod entrance to the Academic floor. You can see a green glow overhead, and beyond it what looks like the open blackness of the void of space. Looking the other way you also head down to the magenta floor.
+  exits:
+    - roomId: "station:shaft-yellow"
+      direction: yellow
+      leaveMessage: " grabs a hand loop and is gently towed to toward the yellow floor"
+    - roomId: "station:shaft-magenta"
+      direction: magenta
+      leaveMessage: " grabs a hand loop and is gently towed to toward the magenta floor"
+    - roomId: "station:shaft-blue"
+      direction: blue
+      leaveMessage: " grabs a hand loop and is gently towed to toward the blue floor"
+    # - roomId: "station:botanical-floor-drop"
+    #   direction: blue
+    #   leaveMessage: " floats casually into the to the Botanical level descent pod."
+- id: commons-floor-drop
+  title: Commons Floor
+  description: >-
+    The descent pod has two opposing doors that open out in the center of the cafeteria.
+  items:
+    - id: station:prybar
+      respawnChance: 20
+      maxLoad: 3
+  exits:
+    - roomId: "station:commons"
+      direction: spin
+- id: commons
+  title: "The Common Area"
+  description: >-
+    A completely black room. Somehow all of the light that should be coming from the room to the west does not pass
+    through the archway. A single lightbulb hangs from the ceiling illuminating a small area. To the east you see a
+    large white dome. There is a sign above the entrance to the dome: "Training Area"
+  # exits:
+  #   - roomId: "station:cafeteria"
+  #     direction: spin
