@@ -1,6 +1,3 @@
-[submodule "bundles/telnet-networking"]
-	path = bundles/telnet-networking
-	url = https://github.com/ranviermud/telnet-networking
 [submodule "local-modules/ranvier-core"]
 	path = local-modules/ranvier-core
 	url = https://github.com/slinkous/ranvier-core.git
