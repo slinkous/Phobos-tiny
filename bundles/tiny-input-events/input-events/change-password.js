@@ -2,7 +2,8 @@
 
 module.exports = {
   event: state => (socket, args) => {
-    socket.write("Your password must be at least 8 characters.\r\n");
+    // socket.write("Your password must be at least 8 characters.\r\n");
+    socket.write("\r\n");
     socket.write("Enter your account password: ");
 
     socket.command("toggleEcho");
@@ -17,10 +18,10 @@ module.exports = {
         return socket.emit("change-password", socket, args);
       }
 
-      if (pass.length < 8) {
-        socket.write("Your password is not long enough.\r\n");
-        return socket.emit("change-password", socket, args);
-      }
+      // if (pass.length < 8) {
+      //   socket.write("Your password is not long enough.\r\n");
+      //   return socket.emit("change-password", socket, args);
+      // }
 
       args.account.setPassword(pass);
 
