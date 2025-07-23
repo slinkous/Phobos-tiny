@@ -21,11 +21,11 @@
   level: 1
   description: "A fellow Phobos student with large cat-eye glasses and a serious expression. There appears to be dirt under her fingernails"
   behaviors:
-    ranvier-aggro:
-       delay: 30
-       warnMessage: '%name% start to hiss and smoke'
-       towards:
-         players: true
-         npcs: false
+    # ranvier-aggro:
+    #    delay: 30
+    #    warnMessage: '%name% start to hiss and smoke'
+    #    towards:
+    #      players: true
+    #      npcs: false
   attributes:
     health: 100
